@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>luke fogarty dot com </title>
+        <link rel="stylesheet" href="../style-cyan.css">
+        <link rel="stylesheet" href="../style-shared.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Jersey+10&family=Jersey+15&family=Noto+Sans+Ogham&display=swap" rel="stylesheet">
+    </head>
+    <body onload="populate('/doodles/data.json')">
+        <nav id="nav">
+            <div id="ogham">
+                ᚛ᚌᚏᚓᚐᚅᚅᚐᚅ᚜
+            </div>
+            <div id="japanese">
+                マンガ
+            </div>
+            <a href="/index.html">
+                <h1 onmouseover="hover('᚛ᚂᚒᚉ ᚃᚑᚌᚐᚏᚈᚐᚔᚌᚆ᚜','ルーク・フォがティ')"> luke fogarty </h1>
+                <h1 onmouseover="hover('᚛ᚇᚑᚈ ᚉᚑᚋ᚜','ドット・コム')"> dot com </h1>
+            </a>
+            <h2>art:
+                <a onmouseover="hover('᚛ᚇᚐᚏᚐ ᚈᚑᚔᚄᚓ᚜','二次元')" href="/2d/"><h3>2D</h3></a>
+                <a onmouseover="hover('᚛ᚈᚏᚔᚒ ᚈᚑᚔᚄᚓ᚜','三次元')" href="/3d/"><h3>3D</h3></a>
+                <a onmouseover="hover('᚛ᚁᚏᚓᚐᚉᚐᚔᚏᚓᚐᚉᚆᚈ᚜','いたずら書き')" href="/doodles/"><h3>doodles</h3></a>
+            </h2>
+            <h2>games:
+                <a onmouseover="hover('᚛ᚃᚔᚄᚓᚐᚔᚅ᚜','ゲームビデオ')" href="/video-games/"><h3>video</h3></a>
+                <a onmouseover="hover('᚛ᚉᚂᚐᚏᚂ᚜','卓上')" href="/physical-games/"><h3>physical</h3></a>
+            </h2>
+            <h2>other:
+                <a onmouseover="hover('᚛ᚄᚉᚓᚐᚂ᚜','文')" href="/writing/"><h3>writing</h3></a>
+                <a onmouseover="hover('᚛ᚃᚒᚋ᚜','私について')" href="/about/"><h3>about</h3></a>
+            </h2>
+        </nav>
+        <main>
+            <h1>Doodles and unfinished ideas.</h1>
+            <section id="gallery"></section>
+        </main>
+    </body>
+    <script src="../main.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</html>
