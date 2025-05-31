@@ -67,16 +67,16 @@
                     <p>
                         Don't be afraid to get in touch! I'll reply, if I see it...
                     </p>
-                </section>
-
                 <form method="POST" id="form">
 
                     <input type="hidden" name="access_key" value="4148ea10-2ed7-4c48-a3ee-c53d8ffac04d">
                     <input type="hidden" name="subject" value="New Submission from Web3Forms">
                     <input type="checkbox" name="botcheck" id="" style="display: none;">
 
-                    <input type="email" name="email" required>
+                    <label for="text">Name:</label>
                     <input type="text" name="name" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" required>
                     <textarea name="message" required></textarea>
 
                     <button type="submit">Send</button>
@@ -84,6 +84,8 @@
                     <p id="result"></p>
 
                 </form>
+                </section>
+
 
             </section>
         </main> 
