@@ -1,5 +1,5 @@
 :root{
-    @media (max-width: 981px) {
+    @media (max-width: 981px) and (min-height: 980px){
         font-size: 27px;
     }
 }
@@ -22,7 +22,7 @@ body{
     animation-name: grow;
     animation-duration: 0.3s;
     background-image: url(/noise.gif);
-    @media (max-width: 981px) {
+    @media (max-width: 981px) and (min-height: 980px) {
         display: flex;
         flex-direction: column;
     }
@@ -36,7 +36,7 @@ h1, h2, h3{
 h1{
     font-size: 2.5rem;
     margin: 0rem 3rem 0 0;
-    @media (max-width: 981px) {
+    @media (max-width: 981px) and (min-height: 980px) {
         margin: 0rem;
     }
 }
@@ -46,7 +46,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    @media (max-width: 981px) {
+    @media (max-width: 981px) and (min-height: 980px) {
         margin: 0.25rem 2rem 0rem 0rem;
     }
 }
@@ -59,7 +59,7 @@ a{
         align-items: flex-end;
         font-size: 2.5rem;
         margin: 0rem 3rem 0 0;
-        @media (max-width: 981px) {
+        @media (max-width: 981px) and (min-height: 980px) {
             font-size: 2.25rem;
         }
     }
@@ -89,7 +89,7 @@ main{
         color: var(--main-bg-color);
         margin: 1rem 2rem;
     }
-    @media (max-width: 981px) {
+    @media (max-width: 981px) and (min-height: 980px) {
         margin: 0rem;
         h1{
             margin: 1rem 4rem;
@@ -106,7 +106,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    @media (max-width: 981px) {
+    @media (max-width: 981px) and (min-height: 980px) {
         flex-direction: row-reverse;
         align-items: flex-start;
         width: 100%;
@@ -183,6 +183,7 @@ model-viewer{
         }
     }
     article{
+        overflow: hidden;
         cursor: pointer;
         width: 280px;
         height: 210px;
@@ -192,6 +193,7 @@ model-viewer{
         border-radius: 0.5rem;
         align-items: center;
         justify-content: center;
+        text-align: center;
         display: flex;
         flex-direction: column;
         opacity: 0.75;
@@ -217,7 +219,7 @@ model-viewer{
     color: var(--main-lk-color);
     transform: rotateZ(90deg) rotateY(180deg);
     font-size: 3.0rem;
-    @media (max-width: 981px) {
+    @media (max-width: 981px) and (min-height: 980px) {
         position: fixed;
     }
 }
@@ -234,7 +236,7 @@ model-viewer{
     left: 12px;
     color: var(--main-tx-color);
     font-size: 2.5rem;
-    @media (max-width: 981px) {
+    @media (max-width: 981px) and (min-height: 980px) {
         top: 221px;
         left: 16px;
     }
@@ -265,7 +267,7 @@ model-viewer{
         min-width: 480px;
         padding: 0rem 1.5rem;
         max-width: 60%;
-        @media (max-width: 981px) {
+        @media (max-width: 981px) and (min-height: 980px) {
              max-width: 80%;
         }
         font-size: 48px;
@@ -393,12 +395,12 @@ model-viewer{
             transform: scale(1.05);
             fill: var(--main-tx-color);
         }
-        @media (max-width: 981px) {
+        @media (max-width: 981px) and (min-height: 980px) {
             margin-right: 1rem;
             margin-top: 0.25rem;
         }
     }
-    @media (max-width: 981px) {
+    @media (max-width: 981px) and (min-height: 980px) {
         translate: 0px -16px;
         transform: scale(0.75);
     }
