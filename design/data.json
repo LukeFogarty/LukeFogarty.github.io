@@ -1,64 +1,7 @@
 [
     {
-        "type": "image",
-        "text": [
-            "An image."
-        ],
-        "src": [
-            "https://cdn.triforcewiki.com/thumb/d/d5/Link_TLoZ_artwork.png/1200px-Link_TLoZ_artwork.png"
-        ]
-    },
-    {
-        "type": "model",
-        "text": [
-            "A Book"
-        ],
-        "src": [
-            "/3d/assets/book.glb"
-        ]
-    },
-    {
         "type": "text",
-        "text": [
-            "Some title text",
-            "Some description text that is longer than the title text and should wrap to the next line if it is too long.",
-            "Some more text that is also longer than the title text and should wrap to the next line if it is too long."
-        ],
-        "src": [
-            "https://cdn.triforcewiki.com/thumb/d/d5/Link_TLoZ_artwork.png/1200px-Link_TLoZ_artwork.png"
-        ]
-    },
-    {
-        "type": "image",
-        "text": [
-            "An image."
-        ],
-        "src": [
-            "https://cdn.europosters.eu/image/1300/185533.jpg"
-        ]
-    },
-    {
-        "type": "image",
-        "text": [
-            "An image."
-        ],
-        "src": [
-            "https://cdn.wikimg.net/en/zeldawiki/images/thumb/f/fc/EoW_Link_Render.png/800px-EoW_Link_Render.png"
-        ]
-    },
-    {
-        "type": "text",
-        "text": [
-                "A different longer title text, that pushes it a bit",
-                "Some description text that is longer than the title text and should wrap to the next line if it is too long.",
-                "Some more text that is also longer than the title text and should wrap to the next line if it is too long.",
-                "Some description text that is longer than the title text and should wrap to the next line if it is too long.",
-                "Some description text that is longer than the title text and should wrap to the next line if it is too long."
-            ],
-        "src": [
-            "https://cdn.europosters.eu/image/1300/185533.jpg",
-            "https://cdn.triforcewiki.com/thumb/d/d5/Link_TLoZ_artwork.png/1200px-Link_TLoZ_artwork.png",
-            "https://cdn.wikimg.net/en/zeldawiki/images/thumb/f/fc/EoW_Link_Render.png/800px-EoW_Link_Render.png"
-        ]
+        "text": ["Redesign in progress", "Hello, this place is looking a bit bare at the minute, just going through a bit of a redesign...","It'll be up and running in no time, though. Trust me.","...","Well, you don't have to, but sure, look."],
+        "src": []
     }
 ]

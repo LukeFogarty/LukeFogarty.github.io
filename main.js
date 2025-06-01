@@ -32,6 +32,15 @@ function populate(src) {
                 if (json[i]?.type === "model") {
                     item = isModel(json[i]);
                 }
+                if (json[i]?.type === "break") {
+                    item = document.createElement("div");
+                    item.style.width = "100%";
+                    item.style.height = "1px";
+                    item.style.margin = "0.5rem";
+                    item.style.borderBottom = "6px dotted white"
+                    
+                }
+
 
                 if (item){
                     gallery.appendChild(item);
