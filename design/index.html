@@ -2,19 +2,19 @@
     <html>
     <head>
         <title>luke fogarty dot com </title>
-        <link rel="stylesheet" href="style-magenta.css">
-        <link rel="stylesheet" href="style-shared.css">
+        <link rel="stylesheet" href="../style-cyan.css">
+        <link rel="stylesheet" href="../style-shared.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Jersey+10&family=Jersey+15&family=Noto+Sans+Ogham&display=swap" rel="stylesheet">
     </head>
-    <body onload="populate('/data.json')">
-        <nav id="nav" style="background-color: blue;">
+    <body onload="populate('/2d/data.json')">
+        <nav id="nav">
             <div id="ogham">
-                ᚛ᚂᚒᚉ ᚃᚑᚌᚐᚏᚈᚐᚔᚌᚆ᚜
+                ᚛ᚂᚔᚅᚔᚑᚉᚆᚈ᚜
             </div>
             <div id="japanese">
-                ルーク・フォがティ
+                描画
             </div>
             <a href="/index.html">
                 <h1 onmouseover="hover('᚛ᚂᚒᚉ ᚃᚑᚌᚐᚏᚈᚐᚔᚌᚆ᚜','ルーク・フォがティ')"> luke fogarty </h1>
@@ -44,10 +44,10 @@
                 </a>
             </div>
         </nav>
-        <h1 style="color: white; font-size: 10em; margin:auto;">
-            404
-        </h1>
+        <main>
+            <h1>Paintings and illustrations.</h1>
+            <section id="gallery"></section>
+        </main>
     </body>
-    <script src="main.js"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script src="../main.js"></script>
 </html>
