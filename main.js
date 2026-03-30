@@ -4,7 +4,7 @@ function hover(ogham,japanese) {
     document.getElementById('japanese').innerHTML = japanese;        
 }
 
-function populate(src) {
+function populate(src, page="home") {
     if(document.readyState == 'complete') {
     fetch(src)
         .then(res => res.json())
@@ -12,6 +12,13 @@ function populate(src) {
             var gallery = document.getElementById('gallery');
             gallery.innerHTML = '';
             for (var i = 0; i < json.length; i++) {
+                if (
+                    json[i].location &&
+                    (page !== 'home' && !json[i].location.includes(page)) ||
+                    (page === 'home' && json[i].location.includes('-only'))
+                ) {
+                    continue;
+                }
                 var is_breaker = Math.random() * 10 < 3;
                 if (is_breaker) {
                     var breaker = document.createElement("div");
@@ -79,9 +86,9 @@ function isModel(data){
         model.setAttribute("src", data.src[0]);
         model.setAttribute("alt", data.text[0]);
         model.setAttribute("id", data.text[0]);
+        model.setAttribute("poster", '/static.gif');
         model.setAttribute("auto-rotate", true);
         model.setAttribute("rotation-per-second", '5deg');
-
         model.onclick = function(e) { fullScreenImage(e.target.src); };
     return model;
 }

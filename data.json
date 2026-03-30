@@ -1,7 +1,20 @@
 [
     {
         "type": "text",
-        "text": ["Redesign in progress", "Hello, this place is looking a bit bare at the minute, just going through a bit of a redesign...","It'll be up and running in no time, though. Trust me.","...","Well, you don't have to, but sure, look."],
+        "location": "writing",
+        "text": ["About", "I am luke fogarty, dot com.","I make weird stuff on the computer, and sometimes on paper.","Just working on getting things ready for this site at the minute, to what end I don't really know."],
+        "src": []
+    },
+    {
+        "type": "text",
+        "location": "art-only",
+        "text": ["No Art", "No new art yet."],
+        "src": []
+    },
+    {
+        "type": "text",
+        "location": "games-only",
+        "text": ["No Games", "No new games yet."],
         "src": []
     }
 ]
