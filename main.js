@@ -1,9 +1,4 @@
 
-function hover(ogham,japanese) {
-    document.getElementById('ogham').innerHTML = ogham;
-    document.getElementById('japanese').innerHTML = japanese;        
-}
-
 function populate(src, page="home") {
     if(document.readyState == 'complete') {
     fetch(src)
@@ -18,14 +13,6 @@ function populate(src, page="home") {
                     (page === 'home' && json[i].location.includes('-only'))
                 ) {
                     continue;
-                }
-                var is_breaker = Math.random() * 10 < 3;
-                if (is_breaker) {
-                    var breaker = document.createElement("div");
-                    breaker.style.width= (100+(Math.random() * 100))+'px';
-                    breaker.style.height= '1px';
-                    breaker.style.pointerEvents = 'none';
-                    gallery.appendChild(breaker);
                 }
 
                 var item;
@@ -61,12 +48,15 @@ function populate(src, page="home") {
 }
 
 function isImage(data, index = 0){
+    var imageRow = document.createElement("div");
     var image = document.createElement("img");
+        imageRow.setAttribute("class", "row");
         image.setAttribute("src", data.src[index]);
         image.setAttribute("alt", data.text[0]);
         image.setAttribute("id", data.text[0]);
-        image.onclick = function(e) { fullScreenImage(e.target.src); };
-    return image;
+        imageRow.onclick = function(e) { fullScreenImage(e.target.src); };
+        imageRow.appendChild(image);
+    return imageRow;
 }
 
 function isText(data){
@@ -81,12 +71,9 @@ function isText(data){
 
 function isModel(data){
     var model = document.createElement("model-viewer");
-        model.width = "360px";
-        model.height = "240px";
         model.setAttribute("src", data.src[0]);
         model.setAttribute("alt", data.text[0]);
         model.setAttribute("id", data.text[0]);
-        model.setAttribute("poster", '/static.gif');
         model.setAttribute("auto-rotate", true);
         model.setAttribute("rotation-per-second", '5deg');
         model.onclick = function(e) { fullScreenImage(e.target.src); };
