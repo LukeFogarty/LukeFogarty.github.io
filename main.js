@@ -49,13 +49,16 @@ function populate(src, page="home") {
 
 function isImage(data, index = 0){
     var imageRow = document.createElement("div");
+    var imageTitle = document.createElement("span");
     var image = document.createElement("img");
-        imageRow.setAttribute("class", "row");
+        imageRow.setAttribute("class", "image-row");
         image.setAttribute("src", data.src[index]);
         image.setAttribute("alt", data.text[0]);
         image.setAttribute("id", data.text[0]);
-        imageRow.onclick = function(e) { fullScreenImage(e.target.src); };
         imageRow.appendChild(image);
+        imageTitle.innerHTML = data.text[0];
+        imageRow.appendChild(imageTitle);
+        imageRow.onclick = function(e) { fullScreenImage(image.src); };
     return imageRow;
 }
 
@@ -70,14 +73,20 @@ function isText(data){
 }
 
 function isModel(data){
+    var modelRow = document.createElement("div");
+    var modelTitle = document.createElement("span");
     var model = document.createElement("model-viewer");
+        modelRow.setAttribute("class", "model-row");
         model.setAttribute("src", data.src[0]);
         model.setAttribute("alt", data.text[0]);
         model.setAttribute("id", data.text[0]);
         model.setAttribute("auto-rotate", true);
         model.setAttribute("rotation-per-second", '5deg');
-        model.onclick = function(e) { fullScreenImage(e.target.src); };
-    return model;
+        modelRow.appendChild(model);
+        modelTitle.innerHTML = data.text[0];
+        modelRow.appendChild(modelTitle);
+        modelRow.onclick = function(e) { fullScreenImage(model.src); };
+    return modelRow;
 }
 
 function fullScreenImage(src) {

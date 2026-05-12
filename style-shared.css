@@ -150,40 +150,81 @@ model-viewer{
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    .row{
+    .image-row{
         cursor: pointer;
         width: 100%;
         height: 150px;
         background-color: var(--main-lk-color);
-        transition: 0.1s;
+        transition: 0.2s;
         opacity: 0.95;
+        img{
+            pointer-events: none;
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.2s;
+            border-radius: 0px 50px 50px 0px;
+        }
+        span{
+            height: 100%;
+            width: 50%;
+            pointer-events: none;
+            font-size: 2rem;
+            color: var(--main-bg-color);
+            position: relative;
+            right: -0.5rem;
+            top: -0.5rem;
+        }
         &:hover{
             height: 180px;
             opacity: 1.0;
             img{
-                transform: scale(1.05) perspective(200px) rotateY(5deg) translateY(-15px);
+                width: 75%;
             }
-        }
-        img{
-            width: 50%;
-            height: 100%;
-            object-fit: scale-down;
-            transform: perspective(200px) rotateY(5deg) translateY(-15px);
         }
     }
 
-
-    model-viewer{
+    .model-row{
         cursor: pointer;
+        overflow: hidden;
         width: 100%;
         height: 150px;
         background-color: var(--main-tx-color);
         opacity: 0.95;
-        transition: 0.1s;
+        transition: 0.2s;
+        model-viewer{
+            width: 50%;
+            height: 100%;
+            opacity: 1;
+        }
+        span{
+            height: 100%;
+            width: 50%;
+            pointer-events: none;
+            font-size: 2rem;
+            color: var(--main-bg-color);
+            position: relative;
+            right: -0.5rem;
+            top: -0.5rem;
+        }
         &:hover{
             height: 180px;
             opacity: 1.0;
+            model-viewer{
+                width: 75%;
+            }
         }
+    }
+
+    model-viewer{
+        overflow: hidden;
+        cursor: pointer;
+        width: 50%;
+        height: 150px;
+        opacity: 0.95;
+        transition: 0.2s;
+        border-radius: 0px 50px 50px 0px;
+        background-color: rgba(0, 0, 0, 0.1);
     }
     article{
         overflow: hidden;
@@ -198,8 +239,8 @@ model-viewer{
         text-align: center;
         display: flex;
         flex-direction: column;
-        opacity: 0.95;
-        transition: 0.1s;
+        opacity: 1;
+        transition: 0.2s;
         &:hover{
             height: 180px;
             opacity: 1.0;
